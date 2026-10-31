@@ -1,6 +1,6 @@
 
 const DATA = {
-  cv: "files/cv.pdf",
+  cv: "file/Black and White Minimalist Professional Software Developer CV.pdf",
   
   skills: [
     { group: "Front end", items: [["HTML5", "ph-file-html"], ["CSS3", "ph-file-css"], ["JavaScript", "ph-file-js"]] },
