@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cywardrenz Alim | Front-End Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Cywardrenz B. Alim, a Front-End Developer from the Philippines."
+    />
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        document.documentElement.dataset.theme =
+          t ||
+          (matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#HOME" class="logo">Cywar<span>.</span></a>
+      <div class="hr">
+        <nav aria-label="Main">
+          <a href="#HOME" class="active">Home</a>
+          <a href="#ABOUT">About</a>
+          <a href="#SKILLS">Skills</a>
+          <a href="#PROJECTS">Projects</a>
+          <a href="#CERTS">Certificates</a>
+          <a href="#CONTACT">Contact</a>
+        </nav>
+        <button
+          class="round"
+          id="theme"
+          type="button"
+          aria-label="Switch to dark mode"
+        >
+          <i class="ph-bold ph-moon"></i><i class="ph-bold ph-sun"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="HOME">
+        <div>
+          <div class="status">Open to work</div>
+          <h1>
+            Hello, I'm Cywar
+            <i class="ph-bold ph-hand-waving" aria-hidden="true"></i>
+          </h1>
+          <h2>Front-End Developer</h2>
+          <p>
+            I'm a Front-End Developer from the Philippines. I build clean,
+            responsive websites that are easy to use.
+          </p>
+          <div class="buttons">
+            <a class="btn big fill" data-cv download
+              ><i class="ph-bold ph-download-simple"></i>Download CV</a
+            >
+            <a class="btn big" data-cv target="_blank" rel="noopener"
+              ><i class="ph-bold ph-file-text"></i>View CV</a
+            >
+          </div>
+          <div class="socials">
+            <a class="round" href="#" aria-label="Instagram"
+              ><i class="ph-bold ph-instagram-logo"></i
+            ></a>
+            <a class="round" href="#" aria-label="GitHub"
+              ><i class="ph-bold ph-github-logo"></i
+            ></a>
+            <a class="round" href="#" aria-label="Facebook"
+              ><i class="ph-bold ph-facebook-logo"></i
+            ></a>
+            <a class="round" href="#" aria-label="Twitter"
+              ><i class="ph-bold ph-twitter-logo"></i
+            ></a>
+          </div>
+        </div>
+        <div class="photo">
+          <img
+            src="image/aaabd9a7-8d0f-4dd0-98f7-f9f5aa595d78.jpg"
+            alt="Portrait of Cywar Alim"
+          />
+        </div>
+      </section>
+
+      <section id="ABOUT">
+        <h2>About me</h2>
+        <p class="sub">A little about who I am.</p>
+        <p class="card about">
+          Hello! My name is <strong>Cywardrenz B. Alim</strong>. I'm super kind
+          and Humble that even my friends can vouch for me.
+        </p>
+        <div class="two">
+          <div>
+            <h3><i class="ph-bold ph-graduation-cap ico"></i>Education</h3>
+            <div id="edu"></div>
+          </div>
+          <div>
+            <h3><i class="ph-bold ph-briefcase ico"></i>Experience</h3>
+            <div id="exp"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="SKILLS">
+        <h2>Tech stack</h2>
+        <p class="sub">Tools I use to build for the web.</p>
+        <div id="skills"></div>
+      </section>
+
+      <section id="PROJECTS">
+        <h2>Projects</h2>
+        <p class="sub">Things I built. You can view them and download them.</p>
+        <div class="grid" id="projects"></div>
+      </section>
+
+      <section id="CERTS">
+        <h2>Certificates</h2>
+        <p class="sub">Courses and training I finished.</p>
+        <div class="grid" id="certs"></div>
+      </section>
+
+      <section id="CONTACT">
+        <h2>Contact me</h2>
+        <p class="sub">Let's work together. Reach out any time.</p>
+        <div class="contact">
+          <a class="card" href="tel:+639469569943"
+            ><i class="ph-bold ph-phone ico"></i>
+            <div><small>Phone</small><span>0946 956 9943</span></div></a
+          >
+          <a class="card" href="mailto:cywardrenz123@gmail.com"
+            ><i class="ph-bold ph-envelope-simple ico"></i>
+            <div>
+              <small>Email</small><span>cywardrenz123@gmail.com</span>
+            </div></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <dialog id="dialog" aria-label="Details">
+      <button class="round" id="dialogClose" type="button" aria-label="Close">
+        <i class="ph-bold ph-x"></i>
+      </button>
+      <div id="dialogBody"></div>
+    </dialog>
+
+    <footer>
+      &copy; <span id="year"></span> Cywardrenz B. Alim. All rights reserved.
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
